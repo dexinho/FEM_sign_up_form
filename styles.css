@@ -1,0 +1,239 @@
+@font-face {
+    font-family: 'Roboto Regular';
+    src: url('fonts/Roboto-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Roboto Bold';
+    src: url('fonts/Roboto-Bold.ttf') format('truetype');
+    font-weight: bold;
+}
+
+:root {
+    --button-color: #503772;
+    --button-height: 3.5em;
+    --heading-font-size: 40px;
+}
+
+.regular-font {
+    font-family: 'Roboto Regular', sans-serif;
+}
+
+.bold-font {
+    font-family: 'Roboto Bold', sans-serif;
+    font-weight: bold;
+}
+
+.div-to-center-containers {
+    background-color: #372a49;
+    width: 100%;
+    height: 99vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-menu-container {
+    background-color: white;
+    /* display: grid; */
+    display: none;
+    column-gap: 2em;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    border-radius: 2em;
+    padding: 2em;
+}
+
+.left-side-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.2em;
+}
+
+.full-line {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-heading {
+    display: inline-block;
+    font-size: var(--heading-font-size);
+    margin: 1em 0 0 0;
+    padding: 0;
+    align-self: flex-start;
+}
+
+.list-div {
+    margin-top: -1em;
+}
+
+.email-address-and-valid-email-required-div {
+    justify-content: space-between;
+    margin-bottom: -0.7em;
+    font-weight: bold;
+}
+
+.email-address-and-valid-email-required-div>div {
+    font-size: 12px;
+}
+
+.right-side-div {
+    background-image: url('images/illustration-sign-up-desktop.svg');
+    border: 2px solid black;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 5%;
+    border: 0;
+}
+
+ul,
+li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul>img {
+    padding: 0 1em 0 0;
+}
+
+ul {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 1em;
+    font-size: 18px;
+}
+
+.input-label {
+    width: 100%;
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+#email-input {
+    border: 1px solid rgb(182, 182, 182);
+    border-radius: 0.5em;
+    color: black;
+    height: 3em;
+    width: 100%;
+    box-shadow: 2px 2px rgba(51, 51, 51, 0.1);
+    text-indent: 1.5em;
+    font-size: 15px;
+    padding: 0;
+}
+
+/* #email-input:active {
+    margin-left: 2em;
+} */
+.sub-button-div {
+    padding-bottom: 3em;
+}
+
+.subscribe-button {
+    background-color: var(--button-color);
+    border-radius: 0.3em;
+    color: white;
+    height: var(--button-height);
+    width: 100%;
+    border: 0;
+    box-shadow: 1px 1px rgba(51, 51, 51, 0.1);
+}
+
+
+.subscribed-container {
+    display: flex;
+    /* display: none; */
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: white;
+    width: 20em;
+    border-radius: 2em;
+    padding: 2em;
+    gap: 1.5em;
+}
+
+.icon-img-div, .thanks-div{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    
+}
+
+.icon-img-big {
+    width: 4em;
+}
+
+.thanks-for-subscribing-div {
+    display: block;
+    font-size: var(--heading-font-size);
+    padding: 0;
+    align-self: flex-start;
+}
+
+.dismiss-message-button {
+    background-color: var(--button-color);
+    color: white;
+    border-radius: 1em;
+    width: 100%;
+    height: var(--button-height);
+}
+
+.confirmation-mail-div {
+    font-size: 14px;
+    line-height: 1.5em;
+}
+
+.confirmation-mail-span {
+    font-weight: bold;
+}
+
+@media (width > 750px) {
+    .main-menu-container {
+        width: 750px;
+    }
+}
+
+@media (width < 415px) {
+    .body {
+        /* background-color: white; */
+    }
+
+    .div-to-center-containers {
+        /* background-color: white; */
+    }
+
+    .main-menu-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        gap: 1em;
+        padding: 0;
+        margin: 0;
+    }
+
+    .left-side-div {
+        order: 2;
+        margin: 0 1em 0 1em;
+        gap: 2em;
+    }
+
+    .right-side-div {
+        order: 1;
+        height: 300px;
+        border-radius: 0 0 1em 1em;
+        background-image: url('images/illustration-sign-up-mobile.svg');
+        background-size: cover;
+        width: 100%;
+    }
+
+    .email-address-and-valid-email-required-div {
+        margin-bottom: -1.5em;
+
+    }
+}
